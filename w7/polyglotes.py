@@ -1,3 +1,4 @@
+# https://www.coursera.org/learn/python-osnovy-programmirovaniya/programming/53SZY/polighloty
 n = int(input())
 allPupils = []
 for i in range(n):
