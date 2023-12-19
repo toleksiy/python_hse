@@ -1,3 +1,4 @@
+# https://www.coursera.org/learn/python-osnovy-programmirovaniya/programming/TlzPY/uznik-zamka-if
 a = int(input())  # узник замка иф: определить, пролезет ли
 b = int(input())  # кирпич a*b*c в отверстие d*e
 c = int(input())
