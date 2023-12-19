@@ -1,3 +1,4 @@
+# https://www.coursera.org/learn/python-osnovy-programmirovaniya/programming/keszi/summa-kvadratov
 n = int(input())
 i = 1
 qsum = 0
