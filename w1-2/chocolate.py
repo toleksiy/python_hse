@@ -1,3 +1,4 @@
+# https://www.coursera.org/learn/python-osnovy-programmirovaniya/programming/5tQ5s/shokoladka
 a1 = int(input())  # коробки: определить, влезет ли кор a1b2c3 в a2b2c2?
 b1 = int(input())  # d в коробку a2b2c2
 c1 = int(input())
