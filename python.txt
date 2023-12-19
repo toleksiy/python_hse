@@ -1,0 +1,141 @@
+python
+
+Official Documentation:
+https://docs.python.org/3/tutorial/datastructures.html#
+
+
+PRINT
+examples
+for point in points:
+    print(' '.join(map(str, point)))
+(points - list of int, point -tuples)
+
+print('\n'.join(sorted(strings, key=len)))
+(strings - list of strings)
+
+formatting 1:
+print("The total cinema's revenue for two weeks was ${}.".format(
+    (second_week + first_week)*price
+
+formatting 2:
+
+---
+НЕОГРАНИЧЕНОЕ КОЛИЧЕСТВО АРГУМЕНТОВ
+example:
+def mySum(*args):
+    nowSum = 0
+    for now in args:
+        nowSum += now
+    return nowSum
+Функция принимает один параметр, перед которым написана звездочка - это признак того, что аргументы будут упакованы в список.
+
+---
+INPUT / OUTPUT files
+ex1:
+inFile = open('input.txt', 'r', encoding='utf8')
+outFile = open('output.txt', 'w', encoding='utf8')
+lines = inFile.readlines()				//reading the whole file
+for line in lines:
+    print(line[-2::-1], file=outFile)
+inFile.close()
+outFile.close()
+
+ex2:
+inFile = open('input.txt', 'r', encoding='utf8')
+outFile = open('output.txt', 'w', encoding='utf8')
+for line in inFile: 				//reading line by line
+    print(line[-2::-1], file=outFile)
+inFile.close()
+outFile.close()
+
+---
+SETs
+a = set()
+Use add to append single values
+a.add(1)
+
+Use update to add elements from tuples, sets, lists or frozen-sets
+a.update([3, 4])
+
+You can also use the | operator to concatenate two sets (union in set theory):
+
+>>> my_set = {1}
+>>> my_set = my_set | {2}
+>>> my_set
+{1, 2}
+Or a shorter form using |=:
+>>> my_set = {1}
+>>> my_set |= {2}
+>>> my_set
+{1, 2}
+
+So I ran a test and Here is the result:
+
+set.add() Took: 0.5208224999951199
+set.update() Took: 0.6461397000239231 `
+"|" operator` Took: 0.7649438999942504
+	
+
+---
+CLASSES (Структуры)
+class Man:
+    height = 0
+    name = ''
+for i in range(n):
+    tempManData = input().split()
+    man = Man()
+    man.height = int(tempManData[0])
+    man.name = tempManData[1]
+    peopleList.append(man)
+
+
+---
+STRIP
+ex
+for line in inFile:
+    mySet |= set(line.strip(",;!-:.\n").split())
+
+
+SORTING by COUNTING
+ex: В ряде задач возможные значения в сортируемом списке сильно ограничены. Например, если мы хотим отсортировать оценки от 0 до 10, то может оказаться эффективнее подсчитать, сколько раз встречалась каждая из оценок и затем вывести её столько раз. 
+marks = map(int, input().split())
+cntMarks = [0] * 11
+for mark in marks:
+    cntMarks[mark] += 1
+for nowMark in range(11):
+    print((str(nowMark) + ' ') * cntMarks[nowMark], end='')
+
+---
+STDIN
+
+ex
+from sys import stdin // 
+print(len(set(stdin.read().split())))
+
+to stop listening in pycharm Windows press ctrl+d
+
+
+---
+LAMBDA functions
+
+lambda x: x**2 
+
+same as 
+def sqr(x):
+    return x**2
+ex
+points.sort(key=lambda point: point[0]**2 + point[1]**2) // point is tuple
+
+---
+INPUT
+
+   player_score = input("Enter {} team {} player result: ".format(
+            team_number,
+            player_number,
+        )).split()
+
+Calculating the sum of numbers input in 1 line (cycle wrapped into a line):
+first_week = sum([int(number) for number in input(
+    "Enter the number of tickets sold during the first week (for each day): ",
+).split()])
+how it looks: Enter the number of tickets sold during the first week (for each day): 48 34 67 34 56 78 49
